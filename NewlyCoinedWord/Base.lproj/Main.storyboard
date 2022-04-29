@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Word View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="WordViewController" customModule="NewlyCoinedWord" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aki-op-R4i">
+                                <rect key="frame" x="20" y="84" width="374" height="40"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="eqg-vy-ehr">
+                                        <rect key="frame" x="0.0" y="0.0" width="20" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="20" id="tCu-j7-csd"/>
+                                        </constraints>
+                                    </view>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="신조어" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="SZg-kI-3He">
+                                        <rect key="frame" x="20" y="0.0" width="314" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="40" id="xXq-G6-Pgz"/>
+                                        </constraints>
+                                        <color key="textColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="color" keyPath="placeholderLabel.textColor">
+                                                <color key="value" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="returnKeyClicked:" destination="BYZ-38-t0r" eventType="editingDidEndOnExit" id="tEh-A1-5dO"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Dn0-Xy-YKH">
+                                        <rect key="frame" x="334" y="0.0" width="40" height="40"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="40" id="873-l8-74G"/>
+                                            <constraint firstAttribute="height" constant="40" id="9G7-Wt-yS5"/>
+                                        </constraints>
+                                        <state key="normal" title="Button"/>
+                                        <buttonConfiguration key="configuration" style="filled" image="magnifyingglass" catalog="system">
+                                            <color key="baseBackgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </buttonConfiguration>
+                                        <connections>
+                                            <action selector="searchBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="k6d-cP-NoW"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="eqg-vy-ehr" firstAttribute="top" secondItem="aki-op-R4i" secondAttribute="top" id="6es-QX-oMC"/>
+                                    <constraint firstItem="SZg-kI-3He" firstAttribute="top" secondItem="aki-op-R4i" secondAttribute="top" id="Hmq-Vi-cI3"/>
+                                    <constraint firstAttribute="bottom" secondItem="eqg-vy-ehr" secondAttribute="bottom" id="Ysv-Vg-0pk"/>
+                                    <constraint firstItem="SZg-kI-3He" firstAttribute="leading" secondItem="eqg-vy-ehr" secondAttribute="trailing" id="cjY-5C-BvC"/>
+                                    <constraint firstItem="eqg-vy-ehr" firstAttribute="leading" secondItem="aki-op-R4i" secondAttribute="leading" id="jbl-qU-QaP"/>
+                                    <constraint firstItem="Dn0-Xy-YKH" firstAttribute="leading" secondItem="SZg-kI-3He" secondAttribute="trailing" id="uvz-3j-92H"/>
+                                    <constraint firstAttribute="bottom" secondItem="SZg-kI-3He" secondAttribute="bottom" id="xN1-EA-HGW"/>
+                                </constraints>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="J06-1n-GmB">
+                                <rect key="frame" x="20" y="139" width="67" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="검색어1">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recommendBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="O2w-tD-KVU"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="x0Q-O5-Q7H">
+                                <rect key="frame" x="97" y="139" width="69" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="검색어2">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recommendBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="7fS-GJ-Gya"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="EuJ-QJ-EYJ">
+                                <rect key="frame" x="176" y="139" width="69" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="검색어3">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recommendBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="EvR-tE-bPT"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zDE-sB-gML">
+                                <rect key="frame" x="255" y="139" width="69.5" height="31"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="검색어4">
+                                    <color key="baseForegroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="recommendBtnClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="mLT-VG-Ohw"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="background" translatesAutoresizingMaskIntoConstraints="NO" id="iTs-4w-T4G">
+                                <rect key="frame" x="0.0" y="298" width="414" height="300"/>
+                            </imageView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="검색결과" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="so5-KK-fP3">
+                                <rect key="frame" x="10" y="367" width="394" height="162"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="zDE-sB-gML" firstAttribute="leading" secondItem="EuJ-QJ-EYJ" secondAttribute="trailing" constant="10" id="1Vq-jc-jya"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="so5-KK-fP3" secondAttribute="trailing" constant="10" id="4jt-iF-3BZ"/>
+                            <constraint firstItem="aki-op-R4i" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="40" id="775-du-prf"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iTs-4w-T4G" secondAttribute="trailing" id="7MC-cZ-z7U"/>
+                            <constraint firstItem="so5-KK-fP3" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="B9r-x1-I5Z"/>
+                            <constraint firstItem="iTs-4w-T4G" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="BDN-AQ-3Nf"/>
+                            <constraint firstItem="so5-KK-fP3" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="Esm-nU-xJS"/>
+                            <constraint firstItem="zDE-sB-gML" firstAttribute="top" secondItem="aki-op-R4i" secondAttribute="bottom" constant="15" id="GUT-RT-zdk"/>
+                            <constraint firstItem="EuJ-QJ-EYJ" firstAttribute="leading" secondItem="x0Q-O5-Q7H" secondAttribute="trailing" constant="10" id="Hsb-id-QzN"/>
+                            <constraint firstItem="aki-op-R4i" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="KaF-X0-Bes"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="aki-op-R4i" secondAttribute="trailing" constant="20" id="U3Z-dQ-upF"/>
+                            <constraint firstItem="iTs-4w-T4G" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="VMJ-v6-7Rn"/>
+                            <constraint firstItem="J06-1n-GmB" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Ygq-nU-df6"/>
+                            <constraint firstItem="x0Q-O5-Q7H" firstAttribute="top" secondItem="aki-op-R4i" secondAttribute="bottom" constant="15" id="a7W-PZ-1wJ"/>
+                            <constraint firstItem="EuJ-QJ-EYJ" firstAttribute="top" secondItem="aki-op-R4i" secondAttribute="bottom" constant="15" id="iUv-gq-43J"/>
+                            <constraint firstItem="J06-1n-GmB" firstAttribute="top" secondItem="aki-op-R4i" secondAttribute="bottom" constant="15" id="nej-tj-Sof"/>
+                            <constraint firstItem="so5-KK-fP3" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="10" id="rNB-2A-aH0"/>
+                            <constraint firstItem="x0Q-O5-Q7H" firstAttribute="leading" secondItem="J06-1n-GmB" secondAttribute="trailing" constant="10" id="vKj-e6-pap"/>
+                            <constraint firstItem="iTs-4w-T4G" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="vhb-4l-Q0e"/>
+                        </constraints>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="BcG-KZ-cB6" appends="YES" id="iuR-GA-OYX"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="recommendBtn1" destination="J06-1n-GmB" id="Xuv-gy-a3E"/>
+                        <outlet property="recommendBtn2" destination="x0Q-O5-Q7H" id="LUj-zL-beA"/>
+                        <outlet property="recommendBtn3" destination="EuJ-QJ-EYJ" id="ue2-pX-tdl"/>
+                        <outlet property="recommendBtn4" destination="zDE-sB-gML" id="fGM-ht-AmZ"/>
+                        <outlet property="resultLabel" destination="so5-KK-fP3" id="eRx-Ot-FLm"/>
+                        <outlet property="searchBtn" destination="Dn0-Xy-YKH" id="FEk-13-xgi"/>
+                        <outlet property="searchStackView" destination="aki-op-R4i" id="4YW-NW-Jdz"/>
+                        <outlet property="searchTextField" destination="SZg-kI-3He" id="oeC-rR-lLL"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="BcG-KZ-cB6">
+                    <connections>
+                        <action selector="tapClicked:" destination="BYZ-38-t0r" id="7fz-Db-Djt"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="131.8840579710145" y="116.51785714285714"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="background" width="300" height="300"/>
+        <image name="magnifyingglass" catalog="system" width="128" height="115"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
