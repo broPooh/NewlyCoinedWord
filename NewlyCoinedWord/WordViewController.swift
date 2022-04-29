@@ -57,6 +57,7 @@ class WordViewController: UIViewController {
     @IBAction func searchBtnClicked(_ sender: UIButton) {
         view.endEditing(true)
         checkSearchText(searchTextField.text)
+        
     }
     
     
